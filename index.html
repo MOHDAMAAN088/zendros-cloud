@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zendros helps startups deploy, automate, and scale applications using Kubernetes, Terraform, cloud infrastructure, and DevOps automation." />
+  <meta name="keywords" content="DevOps, Kubernetes, Terraform, Cloud Infrastructure, CI/CD, AWS, Automation" />
+  <meta name="author" content="Zendros" />
+  <title>Zendros — Deploy Faster. Scale Smarter.</title>
+
+  <!-- Google Fonts: Space Grotesk + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="Zendros home">
+        <span class="nav__logo-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="16,2 30,10 30,22 16,30 2,22 2,10" fill="none" stroke="url(#logoGrad)" stroke-width="2"/>
+            <circle cx="16" cy="16" r="4" fill="url(#logoGrad)"/>
+            <line x1="16" y1="2" x2="16" y2="12" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <line x1="16" y1="20" x2="16" y2="30" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <line x1="2" y1="10" x2="12" y2="14" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <line x1="20" y1="18" x2="30" y2="22" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <line x1="30" y1="10" x2="20" y2="14" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <line x1="12" y1="18" x2="2" y2="22" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6366F1"/>
+                <stop offset="100%" stop-color="#22D3EE"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="nav__logo-text">Zendros</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#tech" class="nav__link">Stack</a></li>
+        <li><a href="#process" class="nav__link">Process</a></li>
+        <li><a href="#pricing" class="nav__link">Pricing</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Get Started</a></li>
+      </ul>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav__mobile" id="mobileMenu" role="dialog" aria-label="Mobile menu">
+      <ul role="list">
+        <li><a href="#about" class="nav__mobile-link">About</a></li>
+        <li><a href="#services" class="nav__mobile-link">Services</a></li>
+        <li><a href="#tech" class="nav__mobile-link">Stack</a></li>
+        <li><a href="#process" class="nav__mobile-link">Process</a></li>
+        <li><a href="#pricing" class="nav__mobile-link">Pricing</a></li>
+        <li><a href="#contact" class="nav__mobile-link nav__mobile-link--cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <!-- Animated topology canvas -->
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+      <!-- Glow orbs -->
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__eyebrow">
+          <span class="hero__badge">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true"><circle cx="4" cy="4" r="4" fill="#22D3EE"/></svg>
+            Cloud &amp; DevOps Specialists
+          </span>
+        </div>
+
+        <h1 class="hero__headline">
+          <span class="hero__headline-white">Deploy Faster.</span><br/>
+          <span class="hero__headline-gradient">Scale Smarter.</span>
+        </h1>
+
+        <p class="hero__sub">
+          Zendros helps startups ship reliable software with Kubernetes, Terraform,
+          and battle-tested DevOps automation — so your team can focus on building
+          products, not firefighting infrastructure.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Start Your Project</a>
+          <a href="#services" class="btn btn--ghost">View Services</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-num">99.9%</span>
+            <span class="hero__stat-label">Uptime SLA</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">5×</span>
+            <span class="hero__stat-label">Faster Deploys</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">48h</span>
+            <span class="hero__stat-label">Avg Setup Time</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+    ============================================================ -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="section__eyebrow">Who we are</p>
+            <h2 class="section__heading" id="about-heading">
+              Infrastructure that works<br/>while you sleep.
+            </h2>
+            <p class="about__body">
+              Zendros was built for founders who are tired of their pipelines breaking at 2 AM.
+              We design, automate, and operate cloud infrastructure that is reliable, observable,
+              and self-healing — so your deploys are events to celebrate, not survive.
+            </p>
+            <p class="about__body">
+              We partner closely with startups at every stage: from zero-to-cloud on AWS to
+              migrating legacy monoliths into containerised microservices on Kubernetes.
+            </p>
+            <a href="#contact" class="btn btn--primary btn--sm">Talk to us</a>
+          </div>
+
+          <div class="about__cards">
+            <div class="glass-card about__card reveal">
+              <div class="about__card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="url(#ag1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="ag1" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <h3>Startup-First</h3>
+              <p>Pricing and processes designed for teams under 50 people, not Fortune 500 bureaucracies.</p>
+            </div>
+            <div class="glass-card about__card reveal">
+              <div class="about__card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="url(#ag2)" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="url(#ag2)" stroke-width="1.5" stroke-linecap="round"/><defs><linearGradient id="ag2" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <h3>Rapid Delivery</h3>
+              <p>Most projects go live in 48–72 hours. We move at startup speed.</p>
+            </div>
+            <div class="glass-card about__card reveal">
+              <div class="about__card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="url(#ag3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="ag3" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <h3>Always Reliable</h3>
+              <p>Self-healing, observable infrastructure with alerting baked in from day one.</p>
+            </div>
+            <div class="glass-card about__card reveal">
+              <div class="about__card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke="url(#ag4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="ag4" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <h3>Automation First</h3>
+              <p>Every task we do once by hand, we automate so it never needs human intervention again.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES
+    ============================================================ -->
+    <section class="section services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">What we do</p>
+          <h2 class="section__heading" id="services-heading">End-to-end DevOps services</h2>
+          <p class="section__sub">From a single containerised app to a full cloud platform, we cover the entire infrastructure lifecycle.</p>
+        </div>
+
+        <div class="services__grid">
+
+          <article class="glass-card service-card reveal" aria-label="Kubernetes Deployment">
+            <div class="service-card__header">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2l7 4v8l-7 4-7-4V6l7-4z" stroke="url(#sk1)" stroke-width="1.5" stroke-linejoin="round"/><circle cx="14" cy="14" r="2.5" fill="url(#sk1)"/><line x1="14" y1="4" x2="14" y2="11.5" stroke="url(#sk1)" stroke-width="1"/><line x1="14" y1="16.5" x2="14" y2="24" stroke="url(#sk1)" stroke-width="1"/><line x1="7" y1="6" x2="11.8" y2="12.5" stroke="url(#sk1)" stroke-width="1"/><line x1="16.2" y1="15.5" x2="21" y2="22" stroke="url(#sk1)" stroke-width="1"/><line x1="21" y1="6" x2="16.2" y2="12.5" stroke="url(#sk1)" stroke-width="1"/><line x1="11.8" y1="15.5" x2="7" y2="22" stroke="url(#sk1)" stroke-width="1"/><defs><linearGradient id="sk1" x1="7" y1="2" x2="21" y2="26" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <span class="service-card__price">From ₹7,999</span>
+            </div>
+            <h3 class="service-card__title">Kubernetes Deployment</h3>
+            <p class="service-card__desc">Deploy applications on production-grade Kubernetes clusters with auto-scaling, rolling updates, and built-in resilience.</p>
+            <ul class="service-card__features" role="list">
+              <li>Cluster setup &amp; hardening</li>
+              <li>Auto-scaling &amp; load balancing</li>
+              <li>Rolling deployments</li>
+            </ul>
+            <a href="#contact" class="service-card__link">Get a quote →</a>
+          </article>
+
+          <article class="glass-card service-card reveal" aria-label="DevOps Automation CI/CD">
+            <div class="service-card__header">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="6" cy="14" r="3" stroke="url(#sk2)" stroke-width="1.5"/><circle cx="22" cy="14" r="3" stroke="url(#sk2)" stroke-width="1.5"/><circle cx="14" cy="6" r="3" stroke="url(#sk2)" stroke-width="1.5"/><circle cx="14" cy="22" r="3" stroke="url(#sk2)" stroke-width="1.5"/><path d="M9 14h6M14 9v6" stroke="url(#sk2)" stroke-width="1.5" stroke-linecap="round"/><path d="M8.1 11.9A6 6 0 0111.9 8.1" stroke="url(#sk2)" stroke-width="1"/><path d="M16.1 19.9A6 6 0 0119.9 16.1" stroke="url(#sk2)" stroke-width="1"/><defs><linearGradient id="sk2" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <span class="service-card__price">From ₹4,999</span>
+            </div>
+            <h3 class="service-card__title">DevOps Automation (CI/CD)</h3>
+            <p class="service-card__desc">Automate every step from code commit to production deployment with robust, testable pipelines.</p>
+            <ul class="service-card__features" role="list">
+              <li>GitHub Actions pipelines</li>
+              <li>Automated testing gates</li>
+              <li>Zero-downtime deploys</li>
+            </ul>
+            <a href="#contact" class="service-card__link">Get a quote →</a>
+          </article>
+
+          <article class="glass-card service-card reveal" aria-label="Infrastructure as Code">
+            <div class="service-card__header">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="8" width="20" height="14" rx="2" stroke="url(#sk3)" stroke-width="1.5"/><path d="M10 14h8M10 18h5" stroke="url(#sk3)" stroke-width="1.5" stroke-linecap="round"/><path d="M9 8V6a5 5 0 0110 0v2" stroke="url(#sk3)" stroke-width="1.5" stroke-linecap="round"/><defs><linearGradient id="sk3" x1="4" y1="4" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <span class="service-card__price">From ₹5,999</span>
+            </div>
+            <h3 class="service-card__title">Infrastructure as Code</h3>
+            <p class="service-card__desc">Provision and manage your entire cloud footprint through version-controlled Terraform, eliminating configuration drift.</p>
+            <ul class="service-card__features" role="list">
+              <li>Terraform modules</li>
+              <li>State management</li>
+              <li>Multi-environment support</li>
+            </ul>
+            <a href="#contact" class="service-card__link">Get a quote →</a>
+          </article>
+
+          <article class="glass-card service-card service-card--featured reveal" aria-label="Self-Healing Infrastructure">
+            <div class="service-card__badge">Most Popular</div>
+            <div class="service-card__header">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3C8 3 3 8 3 14s5 11 11 11 11-5 11-11" stroke="url(#sk4)" stroke-width="1.5" stroke-linecap="round"/><path d="M19 3l4 4-4 4" stroke="url(#sk4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 9v5l3 3" stroke="url(#sk4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="sk4" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <span class="service-card__price">From ₹9,999</span>
+            </div>
+            <h3 class="service-card__title">Self-Healing Infrastructure</h3>
+            <p class="service-card__desc">Infrastructure that detects failures and recovers automatically — minimising downtime without waking your engineers.</p>
+            <ul class="service-card__features" role="list">
+              <li>Auto-restart &amp; failover</li>
+              <li>Health-check automation</li>
+              <li>Alert runbooks</li>
+            </ul>
+            <a href="#contact" class="service-card__link">Get a quote →</a>
+          </article>
+
+          <article class="glass-card service-card reveal" aria-label="Cloud Infrastructure Setup">
+            <div class="service-card__header">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M8 20a5 5 0 010-10c.34 0 .67.034 1 .1A7 7 0 0122 14v1a4 4 0 010 8H8z" stroke="url(#sk5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="sk5" x1="3" y1="10" x2="26" y2="23" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <span class="service-card__price">From ₹2,999</span>
+            </div>
+            <h3 class="service-card__title">Cloud Infrastructure Setup</h3>
+            <p class="service-card__desc">Get your startup on AWS the right way — secure, cost-optimised, and ready to scale from day one.</p>
+            <ul class="service-card__features" role="list">
+              <li>AWS account &amp; VPC setup</li>
+              <li>IAM &amp; security baseline</li>
+              <li>Cost monitoring dashboards</li>
+            </ul>
+            <a href="#contact" class="service-card__link">Get a quote →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHY ZENDROS
+    ============================================================ -->
+    <section class="section why" id="why" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">Why Zendros</p>
+          <h2 class="section__heading" id="why-heading">Built for teams that ship fast</h2>
+        </div>
+
+        <div class="why__grid">
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2.4 5.4L19 8.7l-4 3.9 1 5.4L11 15.4l-5 2.6 1-5.4L3 8.7l5.6-.9L11 2z" stroke="url(#wi1)" stroke-width="1.5" stroke-linejoin="round"/><defs><linearGradient id="wi1" x1="3" y1="2" x2="19" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+            </div>
+            <h3 class="why-card__title">Startup-Friendly Pricing</h3>
+            <p class="why-card__body">Transparent, fixed pricing with no hidden cloud consultant fees. Pay for outcomes, not hours.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M13 2L4 13h7l-2 7 9-11h-7l2-7z" stroke="url(#wi2)" stroke-width="1.5" stroke-linejoin="round"/><defs><linearGradient id="wi2" x1="4" y1="2" x2="18" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+            </div>
+            <h3 class="why-card__title">Fast Delivery</h3>
+            <p class="why-card__body">Most engagements deliver a working environment in 48–72 hours. No months-long discovery phases.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9" stroke="url(#wi3)" stroke-width="1.5"/><path d="M7 11l3 3 5-5" stroke="url(#wi3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="wi3" x1="2" y1="2" x2="20" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+            </div>
+            <h3 class="why-card__title">Modern Cloud Technologies</h3>
+            <p class="why-card__body">We use tools that will still be industry-standard in five years, not legacy stacks with a new coat of paint.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2C5.5 2 2 5.5 2 11s3.5 9 9 9 9-3.5 9-9" stroke="url(#wi4)" stroke-width="1.5" stroke-linecap="round"/><path d="M16 2l3 3-3 3" stroke="url(#wi4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="wi4" x1="2" y1="2" x2="20" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+            </div>
+            <h3 class="why-card__title">Reliable Infrastructure</h3>
+            <p class="why-card__body">Designed with redundancy and observability from the start — not bolted on after the first outage.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M15 8a3 3 0 11-6 0 3 3 0 016 0z" stroke="url(#wi5)" stroke-width="1.5"/><path d="M5 19a7 7 0 0112 0" stroke="url(#wi5)" stroke-width="1.5" stroke-linecap="round"/><defs><linearGradient id="wi5" x1="5" y1="5" x2="17" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+            </div>
+            <h3 class="why-card__title">Personalised Support</h3>
+            <p class="why-card__body">Direct access to your engineer — no ticket queues, no account managers between you and the person who knows your system.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="6" height="6" rx="1" stroke="url(#wi6)" stroke-width="1.5"/><rect x="13" y="3" width="6" height="6" rx="1" stroke="url(#wi6)" stroke-width="1.5"/><rect x="3" y="13" width="6" height="6" rx="1" stroke="url(#wi6)" stroke-width="1.5"/><path d="M16 13v6M13 16h6" stroke="url(#wi6)" stroke-width="1.5" stroke-linecap="round"/><defs><linearGradient id="wi6" x1="3" y1="3" x2="19" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+            </div>
+            <h3 class="why-card__title">Automation First</h3>
+            <p class="why-card__body">If we do it once manually, we automate it. The goal is systems that run themselves.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TECHNOLOGY STACK
+    ============================================================ -->
+    <section class="section tech" id="tech" aria-labelledby="tech-heading">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">Technology Stack</p>
+          <h2 class="section__heading" id="tech-heading">Tools we trust in production</h2>
+          <p class="section__sub">Battle-tested, cloud-native, and open-source — the stack that powers the internet's most reliable systems.</p>
+        </div>
+
+        <div class="tech__grid">
+
+          <div class="tech-card reveal" role="figure" aria-label="Amazon Web Services">
+            <div class="tech-card__logo" aria-hidden="true">
+              <!-- AWS -->
+              <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="50">
+                <text x="4" y="32" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="url(#tg1)">AWS</text>
+                <path d="M4 40 Q40 50 76 40" stroke="url(#tg1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <defs><linearGradient id="tg1" x1="0" y1="0" x2="80" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+              </svg>
+            </div>
+            <span class="tech-card__name">Amazon Web Services</span>
+            <p class="tech-card__desc">Cloud compute, storage, networking</p>
+          </div>
+
+          <div class="tech-card reveal" role="figure" aria-label="Docker">
+            <div class="tech-card__logo" aria-hidden="true">
+              <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="50">
+                <rect x="8" y="20" width="8" height="8" rx="1" stroke="url(#tg2)" stroke-width="1.5"/>
+                <rect x="20" y="20" width="8" height="8" rx="1" stroke="url(#tg2)" stroke-width="1.5"/>
+                <rect x="32" y="20" width="8" height="8" rx="1" stroke="url(#tg2)" stroke-width="1.5"/>
+                <rect x="20" y="10" width="8" height="8" rx="1" stroke="url(#tg2)" stroke-width="1.5"/>
+                <rect x="32" y="10" width="8" height="8" rx="1" stroke="url(#tg2)" stroke-width="1.5"/>
+                <path d="M4 28s2 6 12 6h28c6 0 10-4 10-4s2-2 2-6" stroke="url(#tg2)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                <defs><linearGradient id="tg2" x1="4" y1="10" x2="56" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+              </svg>
+            </div>
+            <span class="tech-card__name">Docker</span>
+            <p class="tech-card__desc">Containerisation &amp; packaging</p>
+          </div>
+
+          <div class="tech-card reveal" role="figure" aria-label="Kubernetes">
+            <div class="tech-card__logo" aria-hidden="true">
+              <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="50">
+                <polygon points="40,5 65,18 65,42 40,48 15,42 15,18" stroke="url(#tg3)" stroke-width="1.5" fill="none"/>
+                <circle cx="40" cy="26" r="5" fill="url(#tg3)"/>
+                <line x1="40" y1="5" x2="40" y2="21" stroke="url(#tg3)" stroke-width="1"/>
+                <line x1="40" y1="31" x2="40" y2="48" stroke="url(#tg3)" stroke-width="1"/>
+                <line x1="65" y1="18" x2="45" y2="24" stroke="url(#tg3)" stroke-width="1"/>
+                <line x1="35" y1="28" x2="15" y2="42" stroke="url(#tg3)" stroke-width="1"/>
+                <line x1="65" y1="42" x2="45" y2="28" stroke="url(#tg3)" stroke-width="1"/>
+                <line x1="35" y1="24" x2="15" y2="18" stroke="url(#tg3)" stroke-width="1"/>
+                <defs><linearGradient id="tg3" x1="15" y1="5" x2="65" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+              </svg>
+            </div>
+            <span class="tech-card__name">Kubernetes</span>
+            <p class="tech-card__desc">Container orchestration at scale</p>
+          </div>
+
+          <div class="tech-card reveal" role="figure" aria-label="Terraform">
+            <div class="tech-card__logo" aria-hidden="true">
+              <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="50">
+                <polygon points="30,8 42,15 42,28 30,22" fill="url(#tg4)" opacity="0.8"/>
+                <polygon points="44,15 56,8 56,22 44,28" fill="url(#tg4)" opacity="0.5"/>
+                <polygon points="30,32 42,38 42,50 30,44" fill="url(#tg4)" opacity="0.7"/>
+                <defs><linearGradient id="tg4" x1="30" y1="8" x2="56" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+              </svg>
+            </div>
+            <span class="tech-card__name">Terraform</span>
+            <p class="tech-card__desc">Infrastructure as code</p>
+          </div>
+
+          <div class="tech-card reveal" role="figure" aria-label="GitHub Actions">
+            <div class="tech-card__logo" aria-hidden="true">
+              <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="50">
+                <circle cx="40" cy="20" r="12" stroke="url(#tg5)" stroke-width="1.5"/>
+                <path d="M40 8C33.4 8 28 13.4 28 20c0 5.3 3.4 9.8 8.1 11.5-.2-1.6-.3-4.1.1-5.9.4-1.6 2.6-10.9 2.6-10.9s-.7-1.3-.7-3.2c0-3 1.7-5.3 3.9-5.3 1.8 0 2.7 1.4 2.7 3 0 1.8-1.2 4.6-1.8 7.1-.5 2.1 1.1 3.9 3.2 3.9 3.8 0 6.4-4.8 6.4-10.5 0-4.3-2.9-7.5-8.2-7.5" fill="url(#tg5)" opacity="0.7"/>
+                <defs><linearGradient id="tg5" x1="28" y1="8" x2="52" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+              </svg>
+            </div>
+            <span class="tech-card__name">GitHub Actions</span>
+            <p class="tech-card__desc">CI/CD pipeline automation</p>
+          </div>
+
+          <div class="tech-card reveal" role="figure" aria-label="Linux">
+            <div class="tech-card__logo" aria-hidden="true">
+              <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="50">
+                <ellipse cx="40" cy="18" rx="10" ry="13" stroke="url(#tg6)" stroke-width="1.5"/>
+                <circle cx="36" cy="15" r="2" fill="url(#tg6)"/>
+                <circle cx="44" cy="15" r="2" fill="url(#tg6)"/>
+                <path d="M35 22s2 3 5 0" stroke="url(#tg6)" stroke-width="1" stroke-linecap="round"/>
+                <path d="M30 32c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="url(#tg6)" stroke-width="1.5" fill="none"/>
+                <path d="M25 38l5-6M55 38l-5-6M30 38h20" stroke="url(#tg6)" stroke-width="1.5" stroke-linecap="round"/>
+                <defs><linearGradient id="tg6" x1="25" y1="5" x2="55" y2="45" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+              </svg>
+            </div>
+            <span class="tech-card__name">Linux</span>
+            <p class="tech-card__desc">Server &amp; system administration</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROCESS
+    ============================================================ -->
+    <section class="section process" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">How we work</p>
+          <h2 class="section__heading" id="process-heading">From first call to production</h2>
+          <p class="section__sub">A structured, repeatable engagement — so you always know where things stand.</p>
+        </div>
+
+        <div class="process__steps">
+
+          <div class="process-step reveal" role="listitem">
+            <div class="process-step__num">01</div>
+            <div class="process-step__content">
+              <div class="process-step__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="11" stroke="url(#ps1)" stroke-width="1.5"/><path d="M9 13h8M13 9v8" stroke="url(#ps1)" stroke-width="1.5" stroke-linecap="round"/><defs><linearGradient id="ps1" x1="2" y1="2" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <h3>Assess</h3>
+              <p>We audit your current infrastructure, deployment workflow, and scaling requirements in a focused discovery session.</p>
+            </div>
+            <div class="process-step__connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-step reveal" role="listitem">
+            <div class="process-step__num">02</div>
+            <div class="process-step__content">
+              <div class="process-step__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="3" width="9" height="9" rx="1" stroke="url(#ps2)" stroke-width="1.5"/><rect x="14" y="3" width="9" height="9" rx="1" stroke="url(#ps2)" stroke-width="1.5"/><rect x="3" y="14" width="9" height="9" rx="1" stroke="url(#ps2)" stroke-width="1.5"/><rect x="14" y="14" width="9" height="9" rx="1" stroke="url(#ps2)" stroke-width="1.5"/><defs><linearGradient id="ps2" x1="3" y1="3" x2="23" y2="23" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <h3>Design</h3>
+              <p>We produce an architecture diagram and Terraform plan tailored to your workloads, team size, and budget.</p>
+            </div>
+            <div class="process-step__connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-step reveal" role="listitem">
+            <div class="process-step__num">03</div>
+            <div class="process-step__content">
+              <div class="process-step__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 13l6 6L21 7" stroke="url(#ps3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 7l-10 6" stroke="url(#ps3)" stroke-width="1" stroke-linecap="round" opacity="0.5"/><defs><linearGradient id="ps3" x1="5" y1="7" x2="21" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <h3>Automate</h3>
+              <p>CI/CD pipelines, IaC modules, and runbooks are built, tested, and version-controlled in your own repositories.</p>
+            </div>
+            <div class="process-step__connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-step reveal" role="listitem">
+            <div class="process-step__num">04</div>
+            <div class="process-step__content">
+              <div class="process-step__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3v14M8 12l5 5 5-5" stroke="url(#ps4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="19" width="18" height="4" rx="1" stroke="url(#ps4)" stroke-width="1.5"/><defs><linearGradient id="ps4" x1="4" y1="3" x2="22" y2="23" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <h3>Deploy</h3>
+              <p>Your application goes live on the new infrastructure with zero-downtime cutover and full monitoring in place.</p>
+            </div>
+            <div class="process-step__connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-step reveal" role="listitem">
+            <div class="process-step__num">05</div>
+            <div class="process-step__content">
+              <div class="process-step__icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3C7.5 3 3 7.5 3 13s4.5 10 10 10 10-4.5 10-10" stroke="url(#ps5)" stroke-width="1.5" stroke-linecap="round"/><path d="M18 3l4 4-4 4" stroke="url(#ps5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 13l3 3 5-5" stroke="url(#ps5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="ps5" x1="3" y1="3" x2="23" y2="23" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              </div>
+              <h3>Optimise</h3>
+              <p>Post-launch, we review performance metrics, trim cloud costs, and hand over documentation so your team is self-sufficient.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRICING
+    ============================================================ -->
+    <section class="section pricing" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">Transparent pricing</p>
+          <h2 class="section__heading" id="pricing-heading">No surprises. No retainers.</h2>
+          <p class="section__sub">Fixed starting prices. Scope is agreed upfront. You only pay when you're happy with the plan.</p>
+        </div>
+
+        <div class="pricing__grid">
+
+          <div class="pricing-card glass-card reveal">
+            <p class="pricing-card__name">Cloud Setup</p>
+            <p class="pricing-card__price">₹2,999<span> / project</span></p>
+            <p class="pricing-card__desc">AWS account setup, VPC, IAM, and security baseline for a new startup.</p>
+            <a href="#contact" class="btn btn--ghost btn--sm">Get started</a>
+          </div>
+
+          <div class="pricing-card glass-card reveal">
+            <p class="pricing-card__name">CI/CD Automation</p>
+            <p class="pricing-card__price">₹4,999<span> / project</span></p>
+            <p class="pricing-card__desc">End-to-end GitHub Actions pipeline with tests, staging, and production gates.</p>
+            <a href="#contact" class="btn btn--ghost btn--sm">Get started</a>
+          </div>
+
+          <div class="pricing-card glass-card reveal">
+            <p class="pricing-card__name">Infra as Code</p>
+            <p class="pricing-card__price">₹5,999<span> / project</span></p>
+            <p class="pricing-card__desc">Terraform modules covering your full cloud environment with state management.</p>
+            <a href="#contact" class="btn btn--ghost btn--sm">Get started</a>
+          </div>
+
+          <div class="pricing-card pricing-card--featured glass-card reveal">
+            <div class="pricing-card__badge">Most Popular</div>
+            <p class="pricing-card__name">Kubernetes Deploy</p>
+            <p class="pricing-card__price">₹7,999<span> / project</span></p>
+            <p class="pricing-card__desc">Production Kubernetes cluster with auto-scaling, ingress, and rolling deploys.</p>
+            <a href="#contact" class="btn btn--primary btn--sm">Get started</a>
+          </div>
+
+          <div class="pricing-card glass-card reveal">
+            <p class="pricing-card__name">Self-Healing Infra</p>
+            <p class="pricing-card__price">₹9,999<span> / project</span></p>
+            <p class="pricing-card__desc">Full self-healing stack with auto-recovery, observability, and on-call runbooks.</p>
+            <a href="#contact" class="btn btn--ghost btn--sm">Get started</a>
+          </div>
+
+        </div>
+
+        <p class="pricing__note">All prices are starting points. Complex projects are quoted after a free scoping call. <a href="#contact">Talk to us →</a></p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__left">
+            <p class="section__eyebrow">Get in touch</p>
+            <h2 class="section__heading" id="contact-heading">Ready to level up your infrastructure?</h2>
+            <p class="contact__body">Tell us about your project. We'll get back to you within 24 hours with a free initial assessment.</p>
+
+            <div class="contact__info">
+              <div class="contact__info-item">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 4h12a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="url(#ci1)" stroke-width="1.5"/><path d="M2 5l7 5 7-5" stroke="url(#ci1)" stroke-width="1.5"/><defs><linearGradient id="ci1" x1="2" y1="4" x2="16" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+                <span>hello@zendros.io</span>
+              </div>
+              <div class="contact__info-item">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7" stroke="url(#ci2)" stroke-width="1.5"/><path d="M9 5v4l2.5 2.5" stroke="url(#ci2)" stroke-width="1.5" stroke-linecap="round"/><defs><linearGradient id="ci2" x1="2" y1="2" x2="16" y2="16" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+                <span>Response within 24 hours</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact form — ready for backend integration via fetch() POST -->
+          <div class="contact__form-wrap glass-card">
+            <form class="contact__form" id="contactForm" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Rahul Sharma" required autocomplete="name" />
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="rahul@startup.in" required autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="company" class="form-label">Company Name</label>
+                <input type="text" id="company" name="company" class="form-input" placeholder="Your Startup Pvt Ltd" autocomplete="organization" />
+              </div>
+
+              <div class="form-group">
+                <label for="service" class="form-label">Service Interested In</label>
+                <select id="service" name="service" class="form-input form-select">
+                  <option value="">Select a service...</option>
+                  <option value="kubernetes">Kubernetes Deployment</option>
+                  <option value="cicd">DevOps Automation (CI/CD)</option>
+                  <option value="iac">Infrastructure as Code</option>
+                  <option value="selfhealing">Self-Healing Infrastructure</option>
+                  <option value="cloud">Cloud Infrastructure Setup</option>
+                  <option value="other">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Project Details <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell us what you're building, your current pain points, and your timeline..." required rows="5"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                <span class="btn__text">Send Message</span>
+                <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+
+              <p class="form-note">By submitting you agree that Zendros may contact you about your enquiry.</p>
+            </form>
+
+            <!-- Success / error states (shown by JS) -->
+            <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="url(#fsg)" stroke-width="2"/><path d="M14 24l7 7 13-13" stroke="url(#fsg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="fsg" x1="2" y1="2" x2="46" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+              <h3>Message received!</h3>
+              <p>We'll be in touch within 24 hours with an initial assessment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#hero" class="nav__logo footer__logo" aria-label="Zendros home">
+            <span class="nav__logo-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><polygon points="16,2 30,10 30,22 16,30 2,22 2,10" fill="none" stroke="url(#flg)" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="url(#flg)"/><line x1="16" y1="2" x2="16" y2="12" stroke="url(#flg)" stroke-width="1.5"/><line x1="16" y1="20" x2="16" y2="30" stroke="url(#flg)" stroke-width="1.5"/><line x1="2" y1="10" x2="12" y2="14" stroke="url(#flg)" stroke-width="1.5"/><line x1="20" y1="18" x2="30" y2="22" stroke="url(#flg)" stroke-width="1.5"/><line x1="30" y1="10" x2="20" y2="14" stroke="url(#flg)" stroke-width="1.5"/><line x1="12" y1="18" x2="2" y2="22" stroke="url(#flg)" stroke-width="1.5"/><defs><linearGradient id="flg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#22D3EE"/></linearGradient></defs></svg>
+            </span>
+            <span class="nav__logo-text">Zendros</span>
+          </a>
+          <p class="footer__tagline">Deploy Faster. Scale Smarter.</p>
+          <p class="footer__desc">Cloud &amp; DevOps specialists helping startups build reliable, automated infrastructure.</p>
+          <!-- Social placeholders -->
+          <div class="footer__social" aria-label="Social media links">
+            <a href="#" class="footer__social-link" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5a7.5 7.5 0 00-2.37 14.62c.375.07.51-.163.51-.363 0-.178-.007-.773-.01-1.394C5.01 14.73 4.555 13.18 4.555 13.18c-.34-.866-.83-1.097-.83-1.097-.68-.464.05-.455.05-.455.75.053 1.145.77 1.145.77.668 1.144 1.753.813 2.18.622.066-.485.26-.813.474-.999-1.667-.19-3.42-.833-3.42-3.708 0-.82.292-1.49.772-2.016-.077-.19-.335-.954.073-1.988 0 0 .63-.202 2.063.77A7.198 7.198 0 019 5.313c.638.003 1.28.086 1.88.253 1.43-.972 2.06-.77 2.06-.77.41 1.034.152 1.798.075 1.988.48.526.77 1.196.77 2.016 0 2.883-1.756 3.517-3.43 3.703.27.232.51.69.51 1.39 0 1.003-.01 1.813-.01 2.06 0 .202.132.437.514.363A7.5 7.5 0 009 1.5z" stroke="currentColor" stroke-width="1" fill="currentColor" opacity="0.7"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.2" opacity="0.7"/><path d="M5.5 7.5v5M5.5 5.5v.5M8 12.5v-2.8c0-1 .6-1.7 1.5-1.7S11 8.7 11 9.7v2.8M8 7.5v5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter / X">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M14 3L3 15M3 3l11 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-heading">Services</h4>
+          <ul role="list">
+            <li><a href="#services">Kubernetes Deployment</a></li>
+            <li><a href="#services">DevOps Automation</a></li>
+            <li><a href="#services">Infrastructure as Code</a></li>
+            <li><a href="#services">Self-Healing Infrastructure</a></li>
+            <li><a href="#services">Cloud Setup</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-heading">Company</h4>
+          <ul role="list">
+            <li><a href="#about">About Zendros</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#tech">Tech Stack</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-heading">Resources</h4>
+          <ul role="list">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Zendros. All rights reserved.</p>
+        <p>Made with ❤️ for the startup community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-top -->
+  <button class="back-top" id="backTop" aria-label="Back to top" hidden>
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 14V4M4 9l5-5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
